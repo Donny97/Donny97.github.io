@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-22T13:06:16+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Slowbot</title><entry><title type="html">SSH and Security</title><link href="http://localhost:4000/ssh/security/2019/12/22/ssh-and-keys.html" rel="alternate" type="text/html" title="SSH and Security" /><published>2019-12-22T11:22:43+05:30</published><updated>2019-12-22T11:22:43+05:30</updated><id>http://localhost:4000/ssh/security/2019/12/22/ssh-and-keys</id><content type="html" xml:base="http://localhost:4000/ssh/security/2019/12/22/ssh-and-keys.html">&lt;h5 id=&quot;what-is-ssh-&quot;&gt;What is SSH ?&lt;/h5&gt;
+
+&lt;p&gt;SSH stands for &lt;code class=&quot;highlighter-rouge&quot;&gt;Secure Socket Shell&lt;/code&gt; or Secure Shell. It is a network protocol for accessing services sercurely over a unsecured network.&lt;/p&gt;
+
+&lt;h5 id=&quot;why-ssh-&quot;&gt;Why SSH ?&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;b&gt;secure connection : &lt;/b&gt;
+&lt;em&gt;ssh allows user to communicate to a remote server by encrypting entire connection, i.e. every packet send across the network is encrypted using a symmetric key cryptography&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;authentication : &lt;/b&gt;
+&lt;em&gt;ssh use password based as well as assymetrical encryption based method to authenticate identity of client&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;executing commands : &lt;/b&gt;
+&lt;em&gt;Also allows to execute commands on server shell and display output for commands on client screen.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;command&quot;&gt;Command&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ssh -i &amp;lt;identity&amp;gt; &amp;lt;user&amp;gt;@&amp;lt;host&amp;gt; -p &amp;lt;port&amp;gt;&lt;/code&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;IdentityFile &lt;/code&gt; &amp;lt;identity&amp;gt; is the private key used for verifying client identity, a corresponding public key must be stored at server’s authorized_host to allow connection.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;User&lt;/code&gt; &amp;lt;user&amp;gt; is the user account for which shell session should be created.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;HostName&lt;/code&gt; &amp;lt;host&amp;gt; is the server address.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Port&lt;/code&gt; -p specify the port on which server is listening for incoming ssh requests.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;sshssh_config&quot;&gt;./ssh/ssh_config&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Remembering details for each connection is hard, instead create a config file for easy access.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  Host prodsv &lt;span class=&quot;c&quot;&gt;# alias name&lt;/span&gt;
+      HostName 172.31.1.4
+      User    himanshu
+      IdentityFile ./ssh/id_ecdsa
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Now the command shortens to : &lt;code class=&quot;highlighter-rouge&quot;&gt;ssh prodsv&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">What is SSH ?</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2019/12/21/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-12-21T21:42:18+05:30</published><updated>2019-12-21T21:42:18+05:30</updated><id>http://localhost:4000/jekyll/update/2019/12/21/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/12/21/welcome-to-jekyll.html">&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Keeping this for reference.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Keeping this for reference.</summary></entry><entry><title type="html">More on Jekyll Styling</title><link href="http://localhost:4000/improvements/additions/2019/12/21/testing-posts.html" rel="alternate" type="text/html" title="More on Jekyll Styling" /><published>2019-12-21T21:00:10+05:30</published><updated>2019-12-21T21:00:10+05:30</updated><id>http://localhost:4000/improvements/additions/2019/12/21/testing-posts</id><content type="html" xml:base="http://localhost:4000/improvements/additions/2019/12/21/testing-posts.html">&lt;p&gt;You can create your layout, includes, etc. by defining the files in same structure as the theme defined in config file (texture in this case.).&lt;/p&gt;
+
+&lt;p&gt;What has been done:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fixed nav menu links.&lt;/li&gt;
+  &lt;li&gt;Added contact nav item.&lt;/li&gt;
+  &lt;li&gt;Added icon for mail.(fontello - very userful)&lt;/li&gt;
+  &lt;li&gt;Seperated header and apply only to contact layout.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Notes:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Jekyll uses the Liquid templating language to process templates&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">You can create your layout, includes, etc. by defining the files in same structure as the theme defined in config file (texture in this case.).</summary></entry></feed>

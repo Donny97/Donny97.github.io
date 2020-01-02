@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>SSH and Security</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>SSH and Security | Slowbot</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="SSH and Security" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What is SSH ?" />
+<meta property="og:description" content="What is SSH ?" />
+<link rel="canonical" href="http://localhost:4000/ssh/security/2019/12/22/ssh-and-keys.html" />
+<meta property="og:url" content="http://localhost:4000/ssh/security/2019/12/22/ssh-and-keys.html" />
+<meta property="og:site_name" content="Slowbot" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-12-22T11:22:43+05:30" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/ssh/security/2019/12/22/ssh-and-keys.html","headline":"SSH and Security","dateModified":"2019-12-22T11:22:43+05:30","datePublished":"2019-12-22T11:22:43+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ssh/security/2019/12/22/ssh-and-keys.html"},"description":"What is SSH ?","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+<body>
+  <header class="texture-black">
+    <div class="container"><div class="navbar">
+	<ul>
+		<a href="/index.html"><li>Home</li></a>
+		<a href="/about.html"><li>About</li></a>
+		<a href="/contact.html"><li>Contact</li></a>
+	</ul>
+</div></div><div class="container">
+	<h1>SSH and Security</h1>
+	<h4 class="post-description"></h4>
+	<div class="post-date" style="margin-top:20px">
+		Published on Dec 22, 2019
+	</div>
+	<ul class="post-tags"><li>ssh</li><li>security</li></ul>
+</div>
+</header>
+  <main>
+    <div class="container">
+      <div class="post-container">
+          <h5 id="what-is-ssh-">What is SSH ?</h5>
+
+<p>SSH stands for <code class="highlighter-rouge">Secure Socket Shell</code> or Secure Shell. It is a network protocol for accessing services sercurely over a unsecured network.</p>
+
+<h5 id="why-ssh-">Why SSH ?</h5>
+
+<ul>
+  <li><b>secure connection : </b>
+<em>ssh allows user to communicate to a remote server by encrypting entire connection, i.e. every packet send across the network is encrypted using a symmetric key cryptography</em></li>
+  <li><b>authentication : </b>
+<em>ssh use password based as well as assymetrical encryption based method to authenticate identity of client</em></li>
+  <li><b>executing commands : </b>
+<em>Also allows to execute commands on server shell and display output for commands on client screen.</em></li>
+</ul>
+
+<h5 id="command">Command</h5>
+
+<blockquote>
+  <ul>
+    <li><code class="highlighter-rouge">ssh -i &lt;identity&gt; &lt;user&gt;@&lt;host&gt; -p &lt;port&gt;</code></li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li><code class="highlighter-rouge">IdentityFile </code> &lt;identity&gt; is the private key used for verifying client identity, a corresponding public key must be stored at server’s authorized_host to allow connection.</li>
+  <li><code class="highlighter-rouge">User</code> &lt;user&gt; is the user account for which shell session should be created.</li>
+  <li><code class="highlighter-rouge">HostName</code> &lt;host&gt; is the server address.</li>
+  <li><code class="highlighter-rouge">Port</code> -p specify the port on which server is listening for incoming ssh requests.</li>
+</ul>
+
+<h4 id="sshssh_config">./ssh/ssh_config</h4>
+
+<ul>
+  <li>
+    <p>Remembering details for each connection is hard, instead create a config file for easy access.</p>
+  </li>
+  <li>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Host prodsv <span class="c"># alias name</span>
+      HostName 172.31.1.4
+      User    himanshu
+      IdentityFile ./ssh/id_ecdsa
+</code></pre></div>    </div>
+  </li>
+  <li>Now the command shortens to : <code class="highlighter-rouge">ssh prodsv</code></li>
+</ul>
+
+
+      </div>
+
+        <!-- Configure Disqus --></div>
+  </main></body>
+</html>

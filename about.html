@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Slowbot</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Slowbot</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Slowbot" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/about.html" />
+<meta property="og:url" content="http://localhost:4000/about.html" />
+<meta property="og:site_name" content="Slowbot" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/about.html","headline":"Slowbot","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+<style>
+	.btn-open {
+  font-size: 1rem;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  user-select: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+.btn-download {
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background-color: #040404;
+  color: #fff;
+  width: 300px;
+  height: 70px;
+  transition: all 0.5s ease;
+  transform-origin: center bottom;
+  transform: scale(1);
+  position: relative;
+  overflow: hidden;
+  outline: none;
+}
+.btn-download:hover {
+  background-color: #a0a0a0;
+}
+.btn-download:before, .btn-download:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.btn-download:after {
+  background: #040404;
+  border-radius: 5px;
+  transform: translatex(-100%);
+}
+.btn-download:focus {
+  font-size: 0;
+  height: 10px;
+  border-radius: 20px;
+  background-color: #d1d1d1;
+  animation-name: stretch;
+  animation-delay: 1.5s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.btn-download:focus + .btn-open {
+  animation-name: appear;
+  animation-delay: 2s;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+.btn-download:focus:after {
+  transform: translateX(0);
+  transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition-delay: 0.4s;
+}
+@keyframes stretch {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-15px);
+  }
+}
+</style>
+<body>
+	<header class="texture-black">
+		<div class="container"><div class="navbar">
+	<ul>
+		<a href="/index.html"><li>Home</li></a>
+		<a href="/about.html"><li>About</li></a>
+		<a href="/contact.html"><li>Contact</li></a>
+	</ul>
+</div></div>
+		<div class="container">
+			<h1>Himanshu</h1>
+			<h2>Developer. Fading Gamer.</h2>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<h1 id="himanshu-gusain--software-engineer">Himanshu Gusain – Software Engineer</h1>
+<ul>
+  <li>7 months of experience as a software engineer in automation platform.</li>
+  <li>Experience with front-end and back-end technologies.</li>
+  <li>Inclination towards system and architecture tech.</li>
+</ul>
+
+<h2 id="education">Education</h2>
+<p><strong>Indian Institute of Information Technology Allahabad</strong><br />
+B.Tech. in Information Technology. <br />
+<em>July 2015 - September 2019</em></p>
+
+<h2 id="skills">Skills</h2>
+<ul>
+  <li>Data Structures and Algorithms.</li>
+  <li>Operating Systems.</li>
+  <li>Computer Network.</li>
+  <li>Distributed Systems.</li>
+  <li>Methodology – Agile, Scrum, Object-Oriented Programming</li>
+  <li>Programming Language – Python, C++, Bash, SQL,TypeScript</li>
+  <li>UI – CSS, HTML</li>
+  <li>CS:GO</li>
+</ul>
+
+<h2 id="tools">Tools</h2>
+<ul>
+  <li>Framework – Django, Angular, Jekyll</li>
+</ul>
+
+<h2 id="experience">Experience</h2>
+<p><strong>Soroco India Pvt. Ltd.</strong><br />
+Software Engineer Intern<br />
+<em>Jan 2019 – Jun 2019</em></p>
+<ul>
+  <li>Developed Angular Dashboard</li>
+  <li>Integrate additional functionalities controlling procsses.</li>
+  <li>Improve and Integrate existing api.</li>
+</ul>
+
+<p><strong>Soroco India Pvt. Ltd.</strong><br />
+Software Engineer<br />
+<em>July 2019 – Present</em></p>
+<ul>
+  <li>Developed automation system.</li>
+  <li>Hardened the product with both unit and integration tests</li>
+  <li>Develop monitoring tools for system status.</li>
+</ul>
+
+		</div>
+	</main>
+	<div class="container">
+		<h1>
+		<form method="get" action="../resume.pdf">
+		<button class="btn-download">View Resume (PDF)</button>
+		<span class="btn-open">></span>
+		 </form>
+		 </h1>
+	  </div>
+</body>
+
+</html>
